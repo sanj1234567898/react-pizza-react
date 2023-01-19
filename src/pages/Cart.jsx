@@ -51,7 +51,7 @@ const Cart = () => {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            Корзина
+            Корзина!
           </h2>
           <div onClick={onClickClear} className="cart__clear">
             <svg
