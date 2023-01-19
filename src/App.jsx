@@ -17,35 +17,34 @@ const NotFound = React.lazy(() =>
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route path="" element={<Home />} />
-        <Route
-          path="cart"
-          element={
-            <React.Suspense fallback={<div>Идет загрузка корзины</div>}>
-              <Cart />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="pizza/:id"
-          element={
-            <React.Suspense fallback={<div>Идет загрузка пиццы</div>}>
-              <FullPizza />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <React.Suspense
-              fallback={<div>Идет загрузка несуществующей страницы</div>}
-            >
-              <NotFound />
-            </React.Suspense>
-          }
-        />
-      </Route>
+      <MainLayout />
+      <Route path="/" element={<Home />} />
+      <Route
+        path="cart"
+        element={
+          <React.Suspense fallback={<div>Идет загрузка корзины</div>}>
+            <Cart />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="pizza/:id"
+        element={
+          <React.Suspense fallback={<div>Идет загрузка пиццы</div>}>
+            <FullPizza />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <React.Suspense
+            fallback={<div>Идет загрузка несуществующей страницы</div>}
+          >
+            <NotFound />
+          </React.Suspense>
+        }
+      />
     </Routes>
   );
 }
