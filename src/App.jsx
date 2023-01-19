@@ -30,7 +30,7 @@ function App() {
       <Route
         path="pizza/:id"
         element={
-          <React.Suspense fallback={<div>Идет загрузка пиццы</div>}>
+          <React.Suspense fallback={<div>Идет загрузка пиццы...</div>}>
             <FullPizza />
           </React.Suspense>
         }
